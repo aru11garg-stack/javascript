@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="card">
+        <h1 id="title"> DOM example</h1>
+        <p id="name"> Arnav</p>
+        <p id="branch">Branch: CSE</p>
+        <p id="marks"> 85</p>
+        <input type="text" id="studentName" placeholder="Naam likh saale"> 
+        <br><br>
+        <button id="updateBtn"> Update Name</button>
+        <button id="colorBtn"> Change color</button>
+        <button id="rresultBtn"> show result</button>
+        <button id="removeBtn"> remove result</button>
+    </div>
+    <script>
+    let title = document.getElementById('title');
+    let name = document.getElementById('name');
+    let input = document.getElementById('studentName');
+    let updateBtn = document.getElementById('updateBtn');
+
+    title.style.color="red";
+    updateBtn.addEventListener('click', 
+    function(){
+        let studentName = input.value;
+    name.textcontent = "Name" + studentName ;
+    } )
+    </script>
+    
+</body>
+</html>             

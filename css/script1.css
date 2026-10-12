@@ -1,0 +1,211 @@
+/* =========================
+   GENERAL STYLING
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 40px 55px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAME & HEADER
+========================= */
+
+h1 {
+    color: #123c69;
+    font-size: 42px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+h3 {
+    color: #555;
+    margin-top: 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+body > p {
+    margin: 5px 0;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+h2 {
+    color: #123c69;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+h2 u {
+    text-decoration: none;
+}
+
+
+/* =========================
+   HORIZONTAL LINE
+========================= */
+
+hr {
+    border: none;
+    border-top: 2px solid #123c69;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   CAREER OBJECTIVE
+========================= */
+
+p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+
+/* =========================
+   EDUCATION TABLE
+========================= */
+
+table {
+    width: 75%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background-color: #123c69;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #bbb;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f6fa;
+}
+
+tr:hover {
+    background-color: #e5eef7;
+}
+
+
+/* =========================
+   SKILLS & STRENGTHS
+========================= */
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+li {
+    margin: 7px 0;
+    font-size: 16px;
+}
+
+li::marker {
+    color: #123c69;
+    font-weight: bold;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+ol li {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media screen and (max-width: 700px) {
+
+    body {
+        margin: 10px;
+        padding: 25px;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 7px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================
+   PRINT / PDF
+========================= */
+
+@media print {
+
+    body {
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    a {
+        color: black;
+    }
+}

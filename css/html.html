@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal | Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+
+  <main class="login-shell">
+
+    <section class="login-brand">
+      <div class="brand-mark">SP</div>
+      <p class="eyebrow">STUDENT SERVICES</p>
+      <h1>Your learning,<br><span>all in one place.</span></h1>
+      <p class="brand-copy">
+        A simple student dashboard to view academic details and performance.
+      </p>
+      <div class="brand-footer">LEARN · GROW · ACHIEVE</div>
+    </section>
+
+    <section class="login-panel">
+      <div class="mobile-brand">
+        <span class="brand-mark small">SP</span>
+        <span>Student Portal</span>
+      </div>
+
+      <p class="eyebrow">WELCOME BACK</p>
+      <h2>Sign in to continue</h2>
+      <p class="muted">Enter your student account details below.</p>
+
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text"
+          placeholder="e.g. arnav" autocomplete="username" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password"
+          placeholder="Enter your password"
+          autocomplete="current-password" required>
+
+        <button class="primary-btn" type="submit" id="loginButton">
+          Sign in <span aria-hidden="true">→</span>
+        </button>
+
+        <p id="loginMessage" class="message"
+          role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="demo-note">
+        <strong>Demo account</strong><br>
+        Username: <code>arnav</code> · Password: <code>student123</code>
+      </div>
+
+      <p class="login-legal">
+        Academic information demo · Student Portal
+      </p>
+    </section>
+
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

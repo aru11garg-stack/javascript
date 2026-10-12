@@ -1,0 +1,122 @@
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full page */
+body {
+    font-family: arial, sans-serif;
+    background: linear-gradient(135deg, #4065bb, #2563eb);
+
+    min-height: 99vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main login container */
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login box */
+.login-box {
+    width: 400px;
+    background-color: rgba(252, 250, 250, 0.77);
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 10 10px 30px rgba(102, 47, 47, 0.3);
+}
+
+/* Heading */
+.login-box h1 {
+    text-align: center;
+    color: #063fe9;
+
+    margin-bottom: 15px;
+}
+
+/* Subtitle */
+.subtitle {
+    text-align: center;
+    color: #666;
+
+    margin-bottom: 35px;
+}
+
+/* Labels */
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input boxes */
+input {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+/* Input when clicked */
+input:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+/* Login button */
+button {
+    width: 100%;
+
+    padding: 15px;
+
+    background-color: #172bd7;
+
+    color: white;
+
+    border: 1px solid #172bd7;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* Button hover */
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Message area */
+#message {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}

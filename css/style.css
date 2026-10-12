@@ -1,0 +1,376 @@
+    /* ---------- Theme ---------- */
+:root {
+    --red: #e23744;
+    --red-dark: #b8202c;
+    --red-light: #fdecee;
+    --text: #1c1c1c;
+    --muted: #5f5f5f;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* keeps sections clear of the sticky header */
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #ffb3ba;
+    outline-offset: 2px;
+}
+
+/* ---------- Header ---------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 6%;
+    background: var(--red);
+    color: var(--white);
+    transition: box-shadow 0.25s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.logo img {
+    display: block;
+    border-radius: 6px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+
+header ul li a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Login is the main action, so it stands out */
+header ul li:last-child a {
+    background: var(--white);
+    color: var(--red);
+    font-weight: 600;
+}
+
+header ul li:last-child a:hover {
+    background: var(--red-light);
+}
+
+/* ---------- Main ---------- */
+main {
+    flex: 1;
+}
+
+main section {
+    padding: 70px 6%;
+}
+
+main h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.intro {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* ---------- Hero (first section) ---------- */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    text-align: center;
+    /* The dark overlay keeps text readable over the photo.
+       Path is relative to this CSS file, so background.png sits next to index.html */
+    background:
+        linear-gradient(rgba(20, 0, 2, 0.55), rgba(120, 10, 20, 0.45)),
+        url('/Best-Famous-Food-of-Gujarat.webp') center / cover no-repeat;
+}
+
+.hero > img {
+    padding: 8px;
+    background: var(--white);
+    border-radius: 50%;
+}
+
+.hero p {
+    max-width: 560px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--white);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero input[type="text"] {
+    width: 100%;
+    max-width: 560px;
+    padding: 16px 22px;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    background: var(--white);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero input[type="text"]:focus {
+    outline: none;
+    border-color: var(--red);
+    box-shadow: 0 0 0 4px rgba(226, 55, 68, 0.3);
+}
+
+.hero input[type="text"].error {
+    border-color: var(--red);
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+.search-message {
+    max-width: 560px;
+    padding: 12px 18px;
+    border-left: 4px solid var(--red);
+    background: var(--red-light);
+    color: var(--red-dark);
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* ---------- About / how it works ---------- */
+.about {
+    background: var(--white);
+}
+
+.steps {
+    list-style: none;
+    counter-reset: step;
+    max-width: 960px;
+    margin: 44px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.steps li {
+    counter-increment: step;
+    text-align: center;
+}
+
+/* Numbers are shown because these really are steps in order */
+.steps li::before {
+    content: counter(step);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 14px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    background: var(--red);
+    border-radius: 50%;
+}
+
+.steps h3 {
+    margin-bottom: 6px;
+    font-size: 1.2rem;
+}
+
+.steps p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* ---------- Cuisines ---------- */
+.cuisines {
+    background: var(--red-light);
+}
+
+.chips {
+    max-width: 760px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.chip {
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--red-dark);
+    background: var(--white);
+    border: 2px solid var(--red);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.chip:hover,
+.chip:focus-visible {
+    background: var(--red);
+    color: var(--white);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    padding: 20px 6%;
+    text-align: center;
+    background: var(--red-dark);
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+/* ---------- Login modal (created by js/script.js) ---------- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal {
+    width: 100%;
+    max-width: 380px;
+    padding: 28px;
+    background: var(--white);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.modal h2 {
+    margin: 0;
+    text-align: left;
+    font-size: 1.5rem;
+    color: var(--red);
+}
+
+.modal input {
+    padding: 12px 14px;
+    font-size: 1rem;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+.modal input:focus {
+    outline: none;
+    border-color: var(--red);
+}
+
+.modal button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--red);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background: var(--red-dark);
+}
+
+.modal .close-btn {
+    background: transparent;
+    color: var(--muted);
+}
+
+.modal .close-btn:hover {
+    background: transparent;
+    color: var(--text);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main section {
+        padding: 50px 6%;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
